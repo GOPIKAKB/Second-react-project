@@ -1,0 +1,22 @@
+.img-cntnr{
+    position: relative;
+    width:'300px';
+    margin-bottom: 18px;
+}
+.text-contnr{
+    position: absolute;
+    top: 64%;
+    left: 50%;
+    transform: translate(-50%, 200%);
+    width: 300px;
+    text-align: center;
+    color: antiquewhite;
+    background-color: black;
+    opacity: .5;
+    width: 100%;
+
+}
+.pntcntr{
+    padding-top: 30px;
+    background-image: url(https://www.keralatourism.org/images/kt//bg/sky-1.jpg);
+}

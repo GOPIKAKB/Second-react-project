@@ -1,0 +1,22 @@
+ .img-cntnr{
+    position:relative
+}
+.textContainer{
+    position: absolute;
+    top: 44%;
+    left: 50%;
+    transform: translate(-50%, 200%);
+    text-align: center;
+    color: antiquewhite;
+    width: 300px;
+    font-size: 20px;
+    background-color: black;
+    opacity:.5;
+    width:100%;
+} 
+.cntnr{
+     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 30px;
+} 
