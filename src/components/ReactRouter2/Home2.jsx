@@ -1,9 +1,14 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 function Home2() {
-  return (
+  const nav=useNavigate()
+  const cickee=()=>{
+    nav(-1)
+}  
+return (
     <div>
-      <h1>home...</h1>
+      <h1 onClick={cickee}>home...</h1>
     </div>
   )
 }
