@@ -2,6 +2,8 @@ import React from 'react'
 import { Card } from 'react-bootstrap/esm'
 import './../../style/ExperienceKerala.css'
 import { IoIosArrowForward } from "react-icons/io";
+import { BsArrowLeftShort } from "react-icons/bs";
+import { useNavigate } from 'react-router-dom';
 
 
 function ExperienceKerala() {
@@ -10,8 +12,13 @@ function ExperienceKerala() {
   { head: 'Village Life', descre: 'Village life of Gods Own Country is a symphony composed on strings of beauty painted with myriad traditions and cultures.', img: 'https://www.keralatourism.org/images/homecontentimage/desktop/cocnut-climbing-2.jpg', color: 'orange' },
   { head: 'Festivals', descre: 'The festival season, the pride and joy of Kerala, is epitomised by the ferocious beats of the chenda (drums) emanating across the landscape. ', img: 'https://www.keralatourism.org/images/homecontentimage/desktop/pooram.jpg', color: 'blue' }]
 
+  const nav=useNavigate()
+  const arrowClick=()=>{
+nav(-1)
+  }
   return (
-    <div style={{textAlign:'center',paddingBottom:'20px'}}>
+    <div style={{paddingBottom:'20px'}}>
+      <h1 style={{color:'blue'}} onClick={arrowClick}><BsArrowLeftShort/></h1>
       <h1 style={{color:'blue',textAlign:'center',padding:'30px 0px'}}>Experience Kerala</h1>
     <div style={{display:'flex', flexWrap:'wrap',justifyContent:'center',padding:'20px 0px'}}>
       {data.map((i) => {

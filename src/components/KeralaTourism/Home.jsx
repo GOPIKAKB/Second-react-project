@@ -30,7 +30,9 @@ function KeralaHome() {
                     <Route path='*' element={<NoPage/>}></Route>
                 </Routes>
             </BrowserRouter>
-           
+            {/* <ExperienceKerala />
+            <WhereToGo />
+            <ThingsToDo /> */}
         </div>
     )
 }
