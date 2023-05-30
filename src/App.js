@@ -13,14 +13,52 @@ import Placement from './components/ReactRouter2/Placement';
 import NavigationBar2 from './components/ReactRouter2/NavigationBar2';
 import Icon1 from './components/KeralaTourism/icons/Icon1';
 import KeralaHome from './components/KeralaTourism/Home';
+import TablePage from './components/CredOpeation/TablePage';
+import InputPage from './components/CredOpeation/InputPage';
+import Crud1 from './components/CRUD/Crud1';
+import View from './components/CRUD/View';
+import ipdata from './components/CRUD/Newpage';
+import { createContext, useState } from 'react';
+import Update from './components/Update';
+import Edit from './components/CRUD/Edit';
+import Add from './components/CRUD/Add';
 
+
+export const newContext = createContext()
 function App() {
+  const [data, setData] = useState(ipdata);
+  const [age, setAge] = useState('');
+  const [name,setName]=useState('');
+  const [place, setPlace] = useState('');
   return (
     <div>
+      <newContext.Provider value={[data, setData,age, setAge,name, setName,place, setPlace]}>
+        <BrowserRouter>
+          <Routes>
+            <Route path='/' element={<Crud1 />}></Route>
+            <Route path='/view/:parameter' element={<View />}></Route>
+            <Route path='/edit/:parameter' element={<Edit/>}></Route>
+            <Route path='/add' element={<Add/>}></Route>
+          </Routes>
+        </BrowserRouter>
+      </newContext.Provider>
+
+        {/* <Update/> */}
+
+      {/* 
+      <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<TablePage/>}></Route>
+        <Route path='input' element={<InputPage val={val}/>}></Route>
+
+        </Routes>
+        </BrowserRouter>  */}
+
+
       {/* <Icon1/> */}
-      <KeralaHome/>
-      
-      
+      {/* <KeralaHome/> */}
+
+
       {/* <BrowserRouter>
       <NavigationBar2/>
         <Routes>
@@ -40,7 +78,6 @@ function App() {
   <Route path='/pricing'element={<Pricing/>}></Route>
 </Routes>
 </BrowserRouter> */}
-
     </div>
   );
 }
